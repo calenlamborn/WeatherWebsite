@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dark Weather App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="sidebar-content">
+      <div class="search-container">
+        <label for="location-input" class="search-label">Enter location</label>
+        <div class="search-input-wrapper">
+          <input
+            type="text"
+           id="location-input"
+             placeholder="City, zip code..."
+            aria-label="Location input"
+            autocomplete="off"
+          />
+            <button id="search-btn" aria-label="Search weather">
+              <i class="fas fa-search" style="color: white;"></i>
+            </button>
+        </div>
+      </div>
+
+      <!-- Weather info -->
+      <p class="date-day">Tuesday</p>
+      <p class="date-time">3:45 PM</p>
+      <h2 class="sidebar-temp">85°F</h2>
+      <p class="weather-description">Clear skies with bright sunshine. Humidity around 40%.</p>
+      <p class="sidebar-wind">Wind: NE 5mph</p>
+
+      <!-- Graph container -->
+      <div class="sidebar-chart-container">
+        <canvas id="tempChart" width="280" height="180"></canvas>
+      </div>
+        <div class="sidebar-location-info">
+            <h3 class="city-name">San Diego, CA</h3>
+            <p class="forecast-summary">Low 65°F / High 85°F <br> Sunny all day</p>
+        </div>
+    </div>
+  </aside>
+      <main class="main-content">
+        <header>
+          <h1>Weather Report</h1>
+        </header>
+
+<section class="weather-display">
+      <div class="main-chart-flex">
+<div class="chart-description">
+  <h2 class="condition-heading">Sunny Skies</h2>
+  <p class="condition-detail">Clear all day with temperatures rising to 85°F.</p>
+  <p class="condition-note">Perfect weather for outdoor activities — wear sunscreen!</p>
+</div>
+
+  <div class="main-chart-container">
+    <h2 class="forecast-label">24-Hour Forecast</h2>
+    <canvas id="tempChartMain" width="400" height="200"></canvas>
+  </div>
+</div>
+</section>
+
+<!-- 7-Day Forecast -->
+<section class="seven-day-forecast">
+  <h2 class="forecast-label">7-Day Forecast</h2>
+  <div class="forecast-grid">
+    <div class="day-card"><h1>Tue</h1><i class="fas fa-sun"></i><p>85°F / 65°F</p></div>
+    <div class="day-card"><h1>Wed</h1><i class="fas fa-sun"></i><p>86°F / 66°F</p></div>
+    <div class="day-card"><h1>Thu</h1><i class="fas fa-cloud-sun"></i><p>83°F / 64°F</p></div>
+    <div class="day-card"><h1>Fri</h1><i class="fas fa-sun"></i><p>87°F / 67°F</p></div>
+    <div class="day-card"><h1>Sat</h1><i class="fas fa-sun"></i><p>88°F / 68°F</p></div>
+    <div class="day-card"><h1>Sun</h1><i class="fas fa-cloud-sun"></i><p>84°F / 65°F</p></div>
+    <div class="day-card"><h1>Mon</h1><i class="fas fa-sun"></i><p>85°F / 66°F</p></div>
+  </div>
+</section>
+
+        <footer>
+          <p>Powered by OpenWeather</p>
+        </footer>
+    </main>
+</div>
+  </div>
+</body>
+</html>
