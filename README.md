@@ -4,11 +4,8 @@ A modern weather web app mockup featuring a glass-style dark UI. This front-end 
 
 ## 📸 Screenshots
 
-### Header
-![Header](./screenshots/header.png)
+### Rainy Weather
+![Header](./screenshots/rain.png)
 
-### Body
-![Body](./screenshots/body.png)
-
-### Footer
-![Footer](./screenshots/footer.png)
+### Sunny Weather
+![Body](./screenshots/sunny.png)
